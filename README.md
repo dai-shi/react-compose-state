@@ -80,8 +80,7 @@ The [example](example) folder contains a working example.
 You can run it with
 
 ```bash
-npm run example
+PORT=8080 npm run example
 ```
 
 and open <http://localhost:8080> in your web browser.
-
