@@ -1,6 +1,9 @@
 react-compose-state
 ===================
 
+[![Build Status](https://travis-ci.org/dai-shi/react-compose-state.svg?branch=master)](https://travis-ci.org/dai-shi/react-compose-state)
+[![npm version](https://badge.fury.io/js/react-compose-state.svg)](https://badge.fury.io/js/react-compose-state)
+
 This provides a helper function to attach state to
 stateless function components.
 
