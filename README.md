@@ -12,7 +12,7 @@ Background
 
 Since React v0.14, stateless function components are supported,
 which allows you to write a component as a pure function.
-This is very handy with ES2015 and JSX. This is an example.
+This is very handy with ES2015 and JSX. Here is an example.
 
 ```javascript
 const Hello = ({ name }) => (<div>Hello, {name}!</div>);
