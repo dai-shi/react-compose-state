@@ -4,7 +4,7 @@ react-compose-state
 [![Build Status](https://travis-ci.org/dai-shi/react-compose-state.svg?branch=master)](https://travis-ci.org/dai-shi/react-compose-state)
 [![npm version](https://badge.fury.io/js/react-compose-state.svg)](https://badge.fury.io/js/react-compose-state)
 
-This provides a helper function to attach state to
+A helper function to attach state to
 stateless function components.
 
 Background
@@ -23,7 +23,7 @@ and once you are used to it, you might want to avoid writing class-based compone
 Class-based components are powerful and you can mange lifecycles of components,
 but the state is one of what is required often, especially if using an external store (like Flux) is not an option.
 
-This package provide an easy way to add state to statelss components.
+This package provides an easy way to add state to statelss components.
 This avoids the use of `this` which is also known as thisless javascript.
 
 Install
