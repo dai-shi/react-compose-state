@@ -1,7 +1,7 @@
 {
   "name": "react-compose-state",
   "description": "A helper function to attach state to stateless function components",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Daishi Kato <daishi@axlight.com>",
   "repository": {
     "type": "git",
@@ -25,6 +25,9 @@
     "pure"
   ],
   "license": "MIT",
+  "dependencies": {
+    "shallowequal": "^0.2.2"
+  },
   "devDependencies": {
     "babel-cli": "^6.7.7",
     "babel-core": "^6.7.7",
