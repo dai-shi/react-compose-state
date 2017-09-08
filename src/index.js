@@ -1,11 +1,10 @@
 import React from 'react';
-import shallowequal from 'shallowequal';
 
 const isFunction = fn => (typeof fn === 'function');
 const capitalize = str => (str.charAt(0).toUpperCase() + str.slice(1));
 
 export const composeWithState = initialState => BaseComponent => (
-  class extends React.Component {
+  class extends React.PureComponent {
     constructor(props) {
       super(props);
       if (isFunction(initialState)) {
@@ -20,9 +19,6 @@ export const composeWithState = initialState => BaseComponent => (
           this.setState({ [key]: val });
         };
       });
-    }
-    shouldComponentUpdate(nextProps, nextState) {
-      return !shallowequal(this.props, nextProps) || !shallowequal(this.state, nextState);
     }
     render() {
       return (<BaseComponent {...this.props} {...this.state} {...this.stateSetters} />);

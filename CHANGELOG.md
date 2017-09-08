@@ -4,6 +4,7 @@
 ### Changed
 - update eslint packages
 - move to jest from mocha/chai
+- update React and use PureComponent
 
 ## [0.1.2] - 2017-09-08
 ### Fixed

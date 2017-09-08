@@ -13,10 +13,6 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _shallowequal = require('shallowequal');
-
-var _shallowequal2 = _interopRequireDefault(_shallowequal);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -36,8 +32,8 @@ var capitalize = function capitalize(str) {
 
 var composeWithState = exports.composeWithState = function composeWithState(initialState) {
   return function (BaseComponent) {
-    return function (_React$Component) {
-      _inherits(_class, _React$Component);
+    return function (_React$PureComponent) {
+      _inherits(_class, _React$PureComponent);
 
       function _class(props) {
         _classCallCheck(this, _class);
@@ -60,11 +56,6 @@ var composeWithState = exports.composeWithState = function composeWithState(init
       }
 
       _createClass(_class, [{
-        key: 'shouldComponentUpdate',
-        value: function shouldComponentUpdate(nextProps, nextState) {
-          return !(0, _shallowequal2.default)(this.props, nextProps) || !(0, _shallowequal2.default)(this.state, nextState);
-        }
-      }, {
         key: 'render',
         value: function render() {
           return _react2.default.createElement(BaseComponent, _extends({}, this.props, this.state, this.stateSetters));
@@ -72,6 +63,6 @@ var composeWithState = exports.composeWithState = function composeWithState(init
       }]);
 
       return _class;
-    }(_react2.default.Component);
+    }(_react2.default.PureComponent);
   };
 };
