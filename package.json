@@ -1,7 +1,7 @@
 {
   "name": "react-compose-state",
   "description": "A helper function to attach state to stateless function components",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "author": "Daishi Kato <daishi@axlight.com>",
   "repository": {
     "type": "git",

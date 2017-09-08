@@ -1,6 +1,8 @@
 # Change Log
 
 ## [Unreleased]
+
+## [0.2.0] - 2017-09-08
 ### Changed
 - update eslint packages
 - move to jest from mocha/chai
