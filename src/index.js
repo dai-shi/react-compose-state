@@ -1,10 +1,10 @@
 import React from 'react';
 import shallowequal from 'shallowequal';
 
-const isFunction = (fn) => (typeof fn === 'function');
-const capitalize = (str) => (str.charAt(0).toUpperCase() + str.slice(1));
+const isFunction = fn => (typeof fn === 'function');
+const capitalize = str => (str.charAt(0).toUpperCase() + str.slice(1));
 
-export const composeWithState = (initialState) => (BaseComponent) => (
+export const composeWithState = initialState => BaseComponent => (
   class extends React.Component {
     constructor(props) {
       super(props);

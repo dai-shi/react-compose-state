@@ -1,7 +1,9 @@
+/* eslint-env browser */
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { composeWithState } from '../src/index.js';
+import { composeWithState } from '../src/index';
 
 const Counter = composeWithState({ counter: 1 })(({ counter, setCounter }) => (
   <div>
@@ -14,7 +16,7 @@ const Counter = composeWithState({ counter: 1 })(({ counter, setCounter }) => (
 const TextBox = composeWithState({ text: '' })(({ text, setText }) => (
   <div>
     <span>Text: {text}</span>
-    <input value={text} onChange={(event) => setText(event.target.value)} />
+    <input value={text} onChange={event => setText(event.target.value)} />
   </div>
 ));
 
@@ -29,7 +31,4 @@ const App = () => (
   </div>
 );
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('content')
-);
+ReactDOM.render(<App />, document.getElementById('content'));

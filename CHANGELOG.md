@@ -1,6 +1,8 @@
 # Change Log
 
 ## [Unreleased]
+### Changed
+- update eslint packages
 
 ## [0.1.2] - 2017-09-08
 ### Fixed

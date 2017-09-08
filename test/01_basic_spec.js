@@ -4,7 +4,7 @@ import chai, { expect } from 'chai';
 import jsxChai from 'jsx-chai';
 import React, { PropTypes } from 'react';
 import { createRenderer } from 'react-addons-test-utils';
-import { composeWithState } from '../src/index.js';
+import { composeWithState } from '../src/index';
 
 chai.use(jsxChai);
 
