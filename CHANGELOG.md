@@ -1,6 +1,8 @@
 # Change Log
 
 ## [Unreleased]
+### Fixed
+- updated dist files
 
 ## [0.1.1] - 2016-05-05
 ### Fixed
