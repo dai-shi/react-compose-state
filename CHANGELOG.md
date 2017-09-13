@@ -1,8 +1,11 @@
 # Change Log
 
 ## [Unreleased]
+
+## [1.0.0] - 2017-09-13
 ### Added
 - options to configure state setters
+- fix the API with v1.0.0
 
 ## [0.2.0] - 2017-09-08
 ### Changed
