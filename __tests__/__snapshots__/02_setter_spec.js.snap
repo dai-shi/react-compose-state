@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`setter spec should update state with custom setter 1`] = `
+<_class>
+  <BaseComponent
+    text="hello"
+    updateText={[Function]}
+  >
+    <div>
+      <h1>
+        hello
+      </h1>
+      <button
+        onClick={[Function]}
+      >
+        button
+      </button>
+    </div>
+  </BaseComponent>
+</_class>
+`;
+
+exports[`setter spec should update state with custom setter 2`] = `
+<_class>
+  <BaseComponent
+    text="replaced"
+    updateText={[Function]}
+  >
+    <div>
+      <h1>
+        replaced
+      </h1>
+      <button
+        onClick={[Function]}
+      >
+        button
+      </button>
+    </div>
+  </BaseComponent>
+</_class>
+`;
+
+exports[`setter spec should update state with default setter 1`] = `
+<_class>
+  <BaseComponent
+    setText={[Function]}
+    text="hello"
+  >
+    <div>
+      <h1>
+        hello
+      </h1>
+      <button
+        onClick={[Function]}
+      >
+        button
+      </button>
+    </div>
+  </BaseComponent>
+</_class>
+`;
+
+exports[`setter spec should update state with default setter 2`] = `
+<_class>
+  <BaseComponent
+    setText={[Function]}
+    text="replaced"
+  >
+    <div>
+      <h1>
+        replaced
+      </h1>
+      <button
+        onClick={[Function]}
+      >
+        button
+      </button>
+    </div>
+  </BaseComponent>
+</_class>
+`;

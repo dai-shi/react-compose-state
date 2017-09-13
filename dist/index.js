@@ -31,6 +31,7 @@ var capitalize = function capitalize(str) {
 };
 
 var composeWithState = exports.composeWithState = function composeWithState(initialState) {
+  var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
   return function (BaseComponent) {
     return function (_React$PureComponent) {
       _inherits(_class, _React$PureComponent);
@@ -45,10 +46,14 @@ var composeWithState = exports.composeWithState = function composeWithState(init
         } else {
           _this.state = initialState;
         }
+        var _options$setters = options.setters,
+            setters = _options$setters === undefined ? {} : _options$setters;
+
         _this.state = _this.state || {};
         _this.stateSetters = {};
         Object.keys(_this.state).forEach(function (key) {
-          _this.stateSetters['set' + capitalize(key)] = function (val) {
+          var setter = setters[key] || 'set' + capitalize(key);
+          _this.stateSetters[setter] = function (val) {
             _this.setState(_defineProperty({}, key, val));
           };
         });

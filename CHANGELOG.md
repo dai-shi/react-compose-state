@@ -1,6 +1,8 @@
 # Change Log
 
 ## [Unreleased]
+### Added
+- options to configure state setters
 
 ## [0.2.0] - 2017-09-08
 ### Changed

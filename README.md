@@ -74,6 +74,35 @@ const initialState = { counter: 1 };
 export default composeWithState(initialState)(Counter);
 ```
 
+With options:
+
+```javascript
+import React from 'react';
+import PropTypes from 'prop-types';
+import { composeWithState } from 'react-compose-state';
+
+const Counter = ({ counter, updateCounter }) => (
+  <div>
+    <span>Count: {counter}</span>
+    <button onClick={() => updateCounter(counter + 1)}>Click</button>
+  </div>
+));
+
+Counter.propTypes = {
+  counter: PropTypes.number.isRequired,
+  updateCounter: PropTypes.func.isRequired,
+}
+
+const initialState = { counter: 1 };
+const options = {
+  setters: {
+    counter: 'updateCounter',
+  },
+};
+
+export default composeWithState(initialState, options)(Counter);
+```
+
 Example
 -------
 
