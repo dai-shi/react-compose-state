@@ -50,7 +50,7 @@ const Counter = composeWithState({ counter: 1 })(({ counter, setCounter }) => (
 ));
 ```
 
-A separate file with PropTypes:
+With PropTypes:
 
 ```javascript
 import React from 'react';
