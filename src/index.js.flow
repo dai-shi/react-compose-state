@@ -1,7 +1,10 @@
-declare type InitialState = Object;
+// @flow
 
-declare type ComposeOptions = {
-  setters: Object
-};
+import { PureComponent } from 'react';
 
-declare function composeWithState(initialState: InitialState, options?: ComposeOptions): ((props: Object) => any)
+declare module.exports: {
+  composeWithState: (
+    initialState: Object,
+    options?: Object
+  ) => PureComponent<any>
+}
