@@ -1,0 +1,7 @@
+declare type InitialState = Object;
+
+declare type ComposeOptions = {
+  setters: Object
+};
+
+declare function composeWithState(initialState: InitialState, options?: ComposeOptions): ((props: Object) => any)
