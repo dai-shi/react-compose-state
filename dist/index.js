@@ -42,15 +42,19 @@ var composeWithState = exports.composeWithState = function composeWithState(init
         var _this = _possibleConstructorReturn(this, (_class.__proto__ || Object.getPrototypeOf(_class)).call(this, props));
 
         if (isFunction(initialState)) {
+          // $FlowFixMe
           _this.state = initialState(props);
         } else {
           _this.state = initialState;
         }
+        if (_this.state === undefined) {
+          _this.state = {};
+        }
+        // $FlowFixMe
+        _this.stateSetters = {};
         var _options$setters = options.setters,
             setters = _options$setters === undefined ? {} : _options$setters;
 
-        _this.state = _this.state || {};
-        _this.stateSetters = {};
         Object.keys(_this.state).forEach(function (key) {
           var setter = setters[key] || 'set' + capitalize(key);
           _this.stateSetters[setter] = function (val) {

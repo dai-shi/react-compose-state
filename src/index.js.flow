@@ -1,0 +1,10 @@
+// @flow
+
+import { PureComponent } from 'react';
+
+declare module.exports: {
+  composeWithState: (
+    initialState: Object,
+    options?: Object
+  ) => PureComponent<any>
+}
