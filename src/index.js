@@ -1,26 +1,27 @@
 // @flow
+
 import React, { type StatelessFunctionalComponent } from 'react';
 
 const isFunction = fn => (typeof fn === 'function');
 const capitalize = str => (str.charAt(0).toUpperCase() + str.slice(1));
 
-export const composeWithState = (initialState :
-  (Object | (props: Object) => Object),
-options: Object = {}) =>
+export const composeWithState = (
+  initialState : (Object | (props: Object) => Object),
+  options: Object = {},
+) =>
   (BaseComponent : StatelessFunctionalComponent<any>) => (
     class extends React.PureComponent<any, any> {
       constructor(props: Object) {
         super(props);
         if (isFunction(initialState)) {
-        // $FlowFixMe
-          this.state = initialState(props);
+          const initializeState = (initialState: (props: Object) => Object);
+          this.state = initializeState(props);
         } else {
           this.state = initialState;
         }
-        if (this.state === undefined) {
+        if (!this.state) {
           this.state = {};
         }
-        // $FlowFixMe
         this.stateSetters = {};
         const { setters = {} } = options;
         Object.keys(this.state).forEach((key) => {
@@ -30,6 +31,10 @@ options: Object = {}) =>
           };
         });
       }
+
+      stateSetters: {
+        [string]: string => void,
+      };
 
       render() {
         return (

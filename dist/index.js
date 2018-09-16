@@ -42,15 +42,14 @@ var composeWithState = exports.composeWithState = function composeWithState(init
         var _this = _possibleConstructorReturn(this, (_class.__proto__ || Object.getPrototypeOf(_class)).call(this, props));
 
         if (isFunction(initialState)) {
-          // $FlowFixMe
-          _this.state = initialState(props);
+          var initializeState = initialState;
+          _this.state = initializeState(props);
         } else {
           _this.state = initialState;
         }
-        if (_this.state === undefined) {
+        if (!_this.state) {
           _this.state = {};
         }
-        // $FlowFixMe
         _this.stateSetters = {};
         var _options$setters = options.setters,
             setters = _options$setters === undefined ? {} : _options$setters;
