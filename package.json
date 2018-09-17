@@ -10,7 +10,7 @@
   "main": "./dist/index.js",
   "scripts": {
     "compile": "babel src -d dist",
-    "flow-stop": "flow stop",
+    "stop-flow": "flow stop",
     "test": "npm run eslint && npm run stop-flow && npm run flow && npm run jest",
     "eslint": "eslint src example test",
     "flow": "flow",
