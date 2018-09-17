@@ -2,13 +2,17 @@
 
 ## [Unreleased]
 
+## [1.3.0] - 2018-09-17
+### Changed
+- update devDependencies
+
 ## [1.2.0] - 2018-09-17
 ### Added
 - flow type annotation
 
 ## [1.1.0] - 2017-10-26
 ### Changed
-- update dependencies
+- update devDependencies
 
 ## [1.0.0] - 2017-09-13
 ### Added

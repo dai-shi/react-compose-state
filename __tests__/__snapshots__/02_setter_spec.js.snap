@@ -12,6 +12,7 @@ exports[`setter spec should update state with custom setter 1`] = `
       </h1>
       <button
         onClick={[Function]}
+        type="button"
       >
         button
       </button>
@@ -32,6 +33,7 @@ exports[`setter spec should update state with custom setter 2`] = `
       </h1>
       <button
         onClick={[Function]}
+        type="button"
       >
         button
       </button>
@@ -52,6 +54,7 @@ exports[`setter spec should update state with default setter 1`] = `
       </h1>
       <button
         onClick={[Function]}
+        type="button"
       >
         button
       </button>
@@ -72,6 +75,7 @@ exports[`setter spec should update state with default setter 2`] = `
       </h1>
       <button
         onClick={[Function]}
+        type="button"
       >
         button
       </button>

@@ -2,17 +2,20 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { mount } from 'enzyme';
+import { configure, mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
+import Adapter from 'enzyme-adapter-react-15';
 
 import { composeWithState } from '../src/index';
+
+configure({ adapter: new Adapter() });
 
 describe('setter spec', () => {
   it('should update state with default setter', () => {
     const BaseComponent = ({ text, setText }) => (
       <div>
         <h1>{text}</h1>
-        <button onClick={() => setText('replaced')}>button</button>
+        <button type="button" onClick={() => setText('replaced')}>button</button>
       </div>
     );
     BaseComponent.propTypes = {
@@ -32,7 +35,7 @@ describe('setter spec', () => {
     const BaseComponent = ({ text, updateText }) => (
       <div>
         <h1>{text}</h1>
-        <button onClick={() => updateText('replaced')}>button</button>
+        <button type="button" onClick={() => updateText('replaced')}>button</button>
       </div>
     );
     BaseComponent.propTypes = {
