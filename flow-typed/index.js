@@ -1,3 +1,3 @@
 // @flow
 
-declare function composeWithState(initialState: Object, options?: Object): any;
+declare function composeWithState(initialState: Object | (props: Object) => Object, options?: Object): any;
