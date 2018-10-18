@@ -1,8 +1,10 @@
 # Change Log
 
 ## [Unreleased]
+
+## [1.5.0] - 2018-10-18
 ### Added
-- type definition for TypeScript
+- naive type definition for TypeScript
 
 ## [1.4.0] - 2018-10-18
 ### Changed
