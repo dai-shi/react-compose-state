@@ -33,7 +33,6 @@
   "devDependencies": {
     "@babel/cli": "^7.1.2",
     "@babel/core": "^7.1.2",
-    "@babel/plugin-transform-flow-strip-types": "^7.0.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
     "babel-core": "^7.0.0-bridge.0",
@@ -81,16 +80,15 @@
         {
           "devDependencies": true
         }
-      ]
+      ],
+      "spaced-comment": 0,
+      "arrow-parens": 0
     }
   },
   "babel": {
     "presets": [
       "@babel/preset-env",
       "@babel/preset-react"
-    ],
-    "plugins": [
-      "@babel/plugin-transform-flow-strip-types"
     ]
   }
 }
