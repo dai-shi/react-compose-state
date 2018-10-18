@@ -31,6 +31,9 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
+/*::
+import type { StatelessFunctionalComponent } from 'react';
+*/
 var isFunction = function isFunction(fn) {
   return typeof fn === 'function';
 };
@@ -39,15 +42,23 @@ var capitalize = function capitalize(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 };
 
-var composeWithState = function composeWithState(initialState) {
-  var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-  return function (BaseComponent) {
+var composeWithState = function composeWithState(initialState
+/*: (Object | (props: Object) => Object)*/
+) {
+  var options
+  /*: Object */
+  = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+  return function (BaseComponent
+  /*: StatelessFunctionalComponent<any> */
+  ) {
     return (
       /*#__PURE__*/
       function (_React$PureComponent) {
         _inherits(_class, _React$PureComponent);
 
-        function _class(props) {
+        function _class(props
+        /*: Object */
+        ) {
           var _this;
 
           _classCallCheck(this, _class);
@@ -55,7 +66,9 @@ var composeWithState = function composeWithState(initialState) {
           _this = _possibleConstructorReturn(this, _getPrototypeOf(_class).call(this, props));
 
           if (isFunction(initialState)) {
-            var initializeState = initialState;
+            var initializeState = initialState
+            /*: (props: Object) => Object */
+            ;
             _this.state = initializeState(props);
           } else {
             _this.state = initialState;
@@ -77,6 +90,12 @@ var composeWithState = function composeWithState(initialState) {
           });
           return _this;
         }
+        /*::
+        stateSetters: {
+          [string]: string => void,
+        };
+        */
+
 
         _createClass(_class, [{
           key: "render",
@@ -86,7 +105,9 @@ var composeWithState = function composeWithState(initialState) {
         }]);
 
         return _class;
-      }(_react.default.PureComponent)
+      }(_react.default.PureComponent
+      /*:: <any, any>*/
+      )
     );
   };
 };
