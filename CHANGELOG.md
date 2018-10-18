@@ -1,6 +1,8 @@
 # Change Log
 
 ## [Unreleased]
+
+## [1.4.0] - 2018-10-18
 ### Changed
 - update devDependencies
 
