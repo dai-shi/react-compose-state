@@ -43,7 +43,7 @@ export const composeWithState = (
     render() {
       return (
         <BaseComponent
-          {...(this.props)}
+          {...this.props}
           {...this.state}
           {...this.stateSetters}
         />);
