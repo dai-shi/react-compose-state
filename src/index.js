@@ -41,12 +41,11 @@ export const composeWithState = (
     */
 
     render() {
-      return (
-        <BaseComponent
-          {...this.props}
-          {...this.state}
-          {...this.stateSetters}
-        />);
+      return React.createElement(BaseComponent, {
+        ...this.props,
+        ...this.state,
+        ...this.stateSetters,
+      });
     }
   }
 );

@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## [1.6.0] - 2019-01-06
+### Changed
+- no JSX in the library code
+
 ## [1.5.0] - 2018-10-18
 ### Added
 - naive type definition for TypeScript
