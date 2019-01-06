@@ -3,6 +3,7 @@ react-compose-state
 
 [![Build Status](https://travis-ci.org/dai-shi/react-compose-state.svg?branch=master)](https://travis-ci.org/dai-shi/react-compose-state)
 [![npm version](https://badge.fury.io/js/react-compose-state.svg)](https://badge.fury.io/js/react-compose-state)
+[![bundle size](https://badgen.net/bundlephobia/minzip/react-compose-state)](https://bundlephobia.com/result?p=react-compose-state)
 
 A helper function to attach state to
 stateless function components.
