@@ -1,14 +1,14 @@
 {
   "name": "react-compose-state",
   "description": "A helper function to attach state to stateless function components",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "author": "Daishi Kato",
   "repository": {
     "type": "git",
     "url": "https://github.com/dai-shi/react-compose-state.git"
   },
   "main": "./dist/index.js",
-  "module": "./src/index.js",
+  "source": "./src/index.js",
   "types": "./src/index.d.ts",
   "scripts": {
     "compile": "babel src -d dist",
